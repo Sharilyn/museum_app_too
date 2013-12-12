@@ -1,2 +1,20 @@
-<h1>Paintings#index</h1>
-<p>Find me in app/views/paintings/index.html.erb</p>
+<h1>MUESEUM OF WONDER</h1>
+<p>Check out these amazing images and stuff</p>
+
+<table cellpadding=4px >
+<tr>
+  <th bgcolor="#99aaff"><i>Title</i></th>
+  <th bgcolor="#aaccff"><i>Artist</i></th>
+  <th bgcolor="#99aacc"><i>Museum </i></th>
+  <th bgcolor="#99aacc"><i>Image </i></th>
+</tr>
+
+<% @paintings.each do |painting| %>
+<tr>
+   <td><%= painting.title %></td>
+   <td><%= painting.artist.name %></td>
+   <td><%= painting.museum.name %></td>
+   <td><%= image_tag painting.image %></td>
+ </tr>
+<% end %>
+</table>
