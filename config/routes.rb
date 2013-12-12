@@ -3,4 +3,6 @@ MuseumAppToo::Application.routes.draw do
   get "museums", to: 'museums#index'
   get "artists", to: 'artists#index'
   resource :painting
-end
+  resource :artist, only: [:show]
+  resource :museum, only: [:show]
+  end
